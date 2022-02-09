@@ -1,10 +1,16 @@
 <?php
+require 'config.php';
+?>
 
-$pdo = new PDO("mysql:dbname=test;host=localhost:3306","root","");
+<h1>Listagem de Usuários</h1>
 
-$sql = $pdo->query('SELECT * FROM usuario');
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Ações</th>
 
-$dados = $sql->fetchAll(pdo::FETCH_ASSOC);
-
-echo '<pre>';
-print_r($dados);
+    </tr>
+</table>
+<a href="cadastrar.php">Cadastrar Usuário</a>
